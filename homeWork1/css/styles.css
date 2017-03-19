@@ -1,0 +1,35 @@
+
+.wrapper {
+    display: block;
+    width: 600px;
+    height: 800px;
+    margin: auto;
+    border: 1px solid gray;
+    padding: 50px;
+    background-color: #f4f3f4;
+}
+
+.wrapper img {
+    width: 30%;
+    height: auto;
+}
+
+.name {
+    text-align: center;
+}
+
+.name,
+.why,
+.contacts {
+    border-bottom: 1px solid gray;
+}
+
+.contacts {
+    padding-bottom: 10px;
+}
+
+p,
+a {
+    text-align: left;
+    padding-left: 30px;
+}
