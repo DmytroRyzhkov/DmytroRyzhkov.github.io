@@ -1,8 +1,85 @@
+* {
+    margin: 0;
+    padding:0;
+}
+html, body {
+    height: 100%;
+}
 
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+header {
+    padding-bottom: 20px;
+}
+aside {
+    padding-right: 20px;
+}
+.bike {
+    border: solid 1px grey;
+    margin-bottom: 20px;
+}
 li {
     display: inline-block;
+
 }
 
 main {
     display: flex;
+
+}
+
+.top {
+    background: #575757;
+    color: white;
+}
+.top li {
+    line-height: 30px;
+    width: 80px;
+    text-align: center;
+}
+.top li:hover {
+    background : black;
+}
+
+.bottom {
+    background: grey;
+    margin-top: 20px;
+}
+.bottom li {
+    line-height: 30px;
+    width: 80px;
+    text-align: center;
+}
+.goods {
+    list-style: none;
+}
+.goods li {
+    display: block;
+    line-height: 32px;
+    height: 32px;
+
+    width: 200px;
+    padding:0 0 0 25px;
+    border: solid 1px grey;
+}
+.bottom li:last-child {
+    width: 400px;
+    text-align: end;
+}
+.goods li:hover {
+    background: gainsboro;
+}
+.bottom li:hover {
+    text-decoration: underline;
+}
+
+main p {
+    width:500px;
 }
