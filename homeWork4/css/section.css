@@ -4,20 +4,24 @@ section {
     display: flex;
     overflow: hidden;
 }
+
 section .column {
     flex: 1;
     padding: 20px;
 }
+
 section .column:nth-child(1) {
     background: #eee;
     order: 0;
     flex-grow: 1;
 }
+
 section .column:nth-child(2) {
-    background: white ;
+    background: white;
     order: 1;
     flex-grow: 2;
 }
+
 section .column:nth-child(3) {
     background: #eee;
     order: 2;
@@ -27,7 +31,8 @@ section .column:nth-child(3) {
 body {
     padding: 20px;
 }
-h3, p{
+
+h3, p {
     text-align: center;
     font-size: 16px;
 }
