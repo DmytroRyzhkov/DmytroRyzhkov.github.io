@@ -14,9 +14,9 @@ section .column:nth-child(1) {
     flex-grow: 1;
 }
 section .column:nth-child(2) {
-    background: none ;
+    background: white ;
     order: 1;
-    flex-grow: 3;
+    flex-grow: 2;
 }
 section .column:nth-child(3) {
     background: #eee;
@@ -29,4 +29,5 @@ body {
 }
 h3, p{
     text-align: center;
+    font-size: 16px;
 }
