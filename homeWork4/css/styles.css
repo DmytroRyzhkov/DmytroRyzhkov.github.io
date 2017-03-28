@@ -15,11 +15,14 @@ header {
 }
 
 body {
+    display: -webkit-flex;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
 }
 
 section {
+    -ms-flex: 1;
+    -webkit-flex: 1;
     flex: 1;
 }

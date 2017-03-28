@@ -1,5 +1,7 @@
 nav {
     display: flex;
+    display: -webkit-flex;
+    -webkit-justify-content: space-around;
     justify-content: space-around;
     background-color: #333;
     font-family: Arial, serif;
