@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc1bce2d-9b45-41d4-882d-4eadf979ebd9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homeWork4/images/background.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homeWork4/images/photo.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homeWork4/css/menu.css" afterPath="$PROJECT_DIR$/homeWork4/css/menu.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homeWork4/css/section.css" afterPath="$PROJECT_DIR$/homeWork4/css/section.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homeWork4/css/styles.css" afterPath="$PROJECT_DIR$/homeWork4/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homeWork4/index.html" afterPath="$PROJECT_DIR$/homeWork4/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,8 +40,8 @@
       <file leaf-file-name="menu.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/homeWork4/css/menu.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+            <state relative-caret-position="216">
+              <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -615,7 +610,7 @@
       <workItem from="1490371085070" duration="589000" />
       <workItem from="1490552616022" duration="1196000" />
       <workItem from="1490693486659" duration="7744000" />
-      <workItem from="1490708994133" duration="5204000" />
+      <workItem from="1490708994133" duration="5349000" />
     </task>
     <task id="LOCAL-00001" summary="first homework created">
       <created>1489940454589</created>
@@ -666,11 +661,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490702357782</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Code refactoring done">
+      <created>1490714237528</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1490714237528</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35197000" />
+    <option name="totallyTimeSpent" value="35342000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="689" extended-state="6" />
@@ -948,8 +950,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/homeWork4/css/menu.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+        <state relative-caret-position="216">
+          <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
           <folding />
         </state>
       </provider>
