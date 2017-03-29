@@ -8,10 +8,10 @@ html {
     margin: auto;
 }
 
-body{
+body {
     height: 950px;
     width: 1060px;
-    border:solid #00A1FD 1px;
+    border: solid #00A1FD 1px;
 }
 
 body {
@@ -33,8 +33,6 @@ header {
     width: 967px;
     height: 120px;
 }
-
-
 
 .bike {
     width: 678px;
@@ -63,7 +61,7 @@ main {
     width: 967px;
     height: 40px;
     color: white;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
 .top li {
@@ -75,10 +73,12 @@ main {
 .top li:hover {
     background: black;
 }
-.text{
+
+.text {
     width: 678px;
     height: 580px;
 }
+
 .bottom {
     width: 967px;
     height: 40px;
