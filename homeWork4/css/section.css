@@ -1,38 +1,24 @@
 section {
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    overflow: hidden;
 }
 
-section .column {
-    flex: 1;
-    padding: 20px;
+#left {
+    width: 216px;
+    background-color: #EBECEE;
 }
 
-section .column:nth-child(1) {
-    background: #eee;
-    order: 0;
-    flex-grow: 1;
+#center {
+    width: 578px;
+    background-color: white;
 }
 
-section .column:nth-child(2) {
-    background: white;
-    order: 1;
-    flex-grow: 2;
-}
-
-section .column:nth-child(3) {
-    background: #eee;
-    order: 2;
-    flex-grow: 1;
-}
-
-body {
-    padding: 20px;
+#right {
+    width: 212px;
+    background-color: #EBECEE;
 }
 
 h3, p {
     text-align: center;
     font-size: 16px;
+    padding-bottom: 7px;
 }

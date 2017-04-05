@@ -4,12 +4,13 @@
 }
 
 .wrapper {
-    width: 1004px;
+    width: 1000px;
     height: 991px;
     margin: 0 auto;
 }
 
 header {
+    width: 994px;
     margin: 0 auto;
     padding: 0;
 }
