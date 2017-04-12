@@ -1,2 +1,2 @@
 # DmytroRyzhkov.github.io
-GoIT FronEnd
+GoIT FrontEnd
