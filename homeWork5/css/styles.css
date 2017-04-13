@@ -78,11 +78,13 @@ section {
     flex-direction: column;
     justify-content: flex-start;
 }
-.wrapper{
+
+.wrapper {
     display: flex;
     flex-direction: column;
 }
-#submit{
+
+#submit {
     width: 149px;
     height: 35px;
     color: white;
@@ -111,7 +113,6 @@ section {
     border: none;
 }
 
-
 .form {
     width: 276px;
     display: flex;
@@ -130,22 +131,26 @@ input[type=text], input[type=password] {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
+
 input[type="text"]::-webkit-input-placeholder {
     color: #ffffff;
 }
+
 input[type="password"]::-webkit-input-placeholder {
     color: #ffffff;
 }
+
 input[type=text]:focus, input[type=password]:focus {
     outline: none;
     border-color: #9ecaed;
     box-shadow: 0 0 10px #9ecaed;
-background-color: #1B5288;
+    background-color: #1B5288;
 }
 
 input[type=checkbox] {
     margin-top: 10px;
 }
+
 input[type=checkbox] + label[for="check"] {
     color: white;
 }
