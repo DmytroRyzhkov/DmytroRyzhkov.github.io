@@ -84,6 +84,23 @@ section {
     flex-direction: column;
 }
 
+.line {
+    display: flex;
+    justify-content: center;
+}
+
+.line h4 {
+    color: white;
+    padding: 0 5px 0 5px;
+}
+
+.line hr {
+    display: block;
+    width: 120px;
+    height: 1px;
+    margin-top: 8px;
+}
+
 #submit {
     width: 149px;
     height: 35px;
