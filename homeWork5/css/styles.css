@@ -3,6 +3,18 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: 'helvetica-neue';
+    src: url('helvetica-webfont.woff2') format('woff2'),
+    url('helvetica-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'helvetica-neue', Arial, sans-serif;
+}
+
 header {
     margin: 0 auto;
     width: 1215px;
@@ -138,12 +150,15 @@ section {
     justify-content: center;
     align-self: center;
 }
+
 #f {
     border-right: 1px solid grey;
 }
+
 .form img {
-    padding:4px 20px 4px 5px;
+    padding: 4px 20px 4px 5px;
 }
+
 input[type=text], input[type=password] {
     width: 100%;
     background-color: black;
@@ -151,7 +166,7 @@ input[type=text], input[type=password] {
     padding: 10px 20px;
     margin: 14px 0;
     display: block;
-    border: 1px solid #ccc;
+    border: none;
     box-sizing: border-box;
 }
 
@@ -174,6 +189,17 @@ input[type=checkbox] {
     margin-top: 10px;
 }
 
+label[for="check"] {
+    padding-left: 10px;
+}
+
 input[type=checkbox] + label[for="check"] {
     color: white;
+}
+
+.privacy-policy p {
+    margin-top: 12px;
+    color: white;
+    font-size: 12px;
+    text-align: center;
 }
