@@ -45,6 +45,7 @@ input[type="text"], input[type="password"] {
     height: 16px;
     font-size: 8px;
     align-self: center;
+    margin-left: -15px;
 }
 
 .enter {
@@ -68,6 +69,7 @@ input[type="text"], input[type="password"] {
 
 .enter img {
     align-self: center;
+    margin: 0 -5px 0 -5px;
 }
 
 .link {
@@ -75,6 +77,15 @@ input[type="text"], input[type="password"] {
     text-decoration: none;
     color: white;
     padding: 0 5px 0 5px;
+}
+
+#enter {
+    display: flex;
+}
+
+#border {
+    border-right: solid 1px white;
+    margin-left: -20px;
 }
 
 .icons {
@@ -131,7 +142,7 @@ menu {
     justify-content: flex-end;
 }
 
-button {
+menu a {
     background-color: #000000;
     border: none;
     color: grey;
@@ -146,7 +157,7 @@ button {
 
 }
 
-button:hover {
+menu a:hover {
     background-color: #1B5288;
     color: white;
 }
