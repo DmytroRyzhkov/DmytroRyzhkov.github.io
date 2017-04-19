@@ -18,7 +18,6 @@ body {
     width: 908px;
     display: flex;
     align-content: center;
-
 }
 
 .phones {
@@ -58,6 +57,7 @@ input[type="text"], input[type="password"] {
     margin-left: 10px;
     background-color: #1B5288;
     border-radius: 3px;
+    box-shadow: 0 5px 5px 0 rgba(128, 128, 128, 0.5);
 }
 
 .enter a {
@@ -76,9 +76,23 @@ input[type="text"], input[type="password"] {
     color: white;
     padding: 0 5px 0 5px;
 }
+
+.icons {
+    border: solid 1px grey;
+    border-radius: 10px;
+    height: 20px;
+    width: 75px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    align-self: center;
+    margin-left: 15px;
+}
+
 .sprite {
     background: url(../images/spritesheet.png) no-repeat;
-    display: block;
+    display: inline-block;
 }
 
 .sprite-1 {
@@ -99,22 +113,24 @@ input[type="text"], input[type="password"] {
     background-position: -51px -5px;
 }
 
-
 .logo {
     margin-top: 12px;
 }
+
 nav {
     background-color: black;
     display: flex;
     align-items: center;
     border-radius: 5px;
-    box-shadow: 0 5px 5px 0  rgba(0, 0, 0, 0.5) ;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
 }
+
 menu {
     width: 630px;
     display: flex;
     justify-content: flex-end;
 }
+
 button {
     background-color: #000000;
     border: none;
@@ -129,13 +145,16 @@ button {
     border-radius: 20px;
 
 }
+
 button:hover {
     background-color: #1B5288;
     color: white;
 }
+
 section {
     margin-top: 20px;
 }
+
 .catalog {
     display: flex;
     align-items: center;
@@ -143,6 +162,7 @@ section {
     border-radius: 20px;
     width: 210px;
 }
+
 .catalog p {
     padding: 1px 2px;
     font-size: 12px;
