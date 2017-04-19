@@ -76,7 +76,74 @@ input[type="text"], input[type="password"] {
     color: white;
     padding: 0 5px 0 5px;
 }
+.sprite {
+    background: url(../images/spritesheet.png) no-repeat;
+    display: block;
+}
+
+.sprite-1 {
+    width: 12px;
+    height: 11px;
+    background-position: -5px -5px;
+}
+
+.sprite-2 {
+    width: 14px;
+    height: 11px;
+    background-position: -27px -5px;
+}
+
+.sprite-3 {
+    width: 12px;
+    height: 9px;
+    background-position: -51px -5px;
+}
+
 
 .logo {
     margin-top: 12px;
+}
+nav {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px 0  rgba(0, 0, 0, 0.5) ;
+}
+menu {
+    width: 630px;
+    display: flex;
+    justify-content: flex-end;
+}
+button {
+    background-color: #000000;
+    border: none;
+    color: grey;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 3px;
+    cursor: pointer;
+    border-radius: 20px;
+
+}
+button:hover {
+    background-color: #1B5288;
+    color: white;
+}
+section {
+    margin-top: 20px;
+}
+.catalog {
+    display: flex;
+    align-items: center;
+    border: solid 1px grey;
+    border-radius: 20px;
+    width: 210px;
+}
+.catalog p {
+    padding: 1px 2px;
+    font-size: 12px;
 }
