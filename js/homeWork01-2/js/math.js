@@ -17,7 +17,7 @@ function pow(number, rate) {
     else if (number === 0) {
         result = 0;
     }
-    else if (rate === 0) {
+    else if (number !== 0 && rate === 0) {
         result = 1;
     }
     return result;
