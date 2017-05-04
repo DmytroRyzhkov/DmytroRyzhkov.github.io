@@ -12,8 +12,7 @@ function pow(number, rate) {
         var temp = number;
         for (var k = 0; k < (rate * -1) -1 ; k++) {
             temp *= number;
-            result = 1 / temp;
-        }
+        } result = 1 / temp;
     }
     else if (number === 0) {
         result = 0;
