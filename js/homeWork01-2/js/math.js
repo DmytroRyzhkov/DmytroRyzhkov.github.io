@@ -1,6 +1,7 @@
 /**
  * Created by ryzhkov on 04.05.17.
  */
+"use strict";
 function pow(number, rate) {
     var result = 1;
     if (number !== 0 && rate > 0) {

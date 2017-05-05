@@ -1,6 +1,7 @@
 /**
  * Created by ryzhkov on 04.05.17.
  */
+"use strict";
 var names = [];
 for (var i = 0; i < 5; i++) {
     names[i] = prompt('Enter user names to DB ! \n' + (5 - i) + ' left.', "");
