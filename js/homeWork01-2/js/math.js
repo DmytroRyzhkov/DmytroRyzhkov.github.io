@@ -26,4 +26,3 @@ function pow(number, rate) {
 var number = prompt("Введите целое число", "");
 var rate = prompt("Введите степень", "");
 console.log(pow(number, rate));
-console.log('Проверочный результат: \n ', Math.pow(number, rate));

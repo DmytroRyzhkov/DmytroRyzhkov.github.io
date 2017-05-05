@@ -12,10 +12,10 @@ function nameCheck(name, dataBase) {
     for (var k = 0; k < dataBase.length; k++) {
         if (name === dataBase[k]) {
             isCorrect = true;
-            var message = 'Hello, ' + name;
+            var message = 'Hello, ' + name + ' !';
             alert(message);
             break;
         }
-    } if (!isCorrect) alert('No such username!')
+    }
+    if (!isCorrect) alert('No such username!')
 }
-console.log(names);
