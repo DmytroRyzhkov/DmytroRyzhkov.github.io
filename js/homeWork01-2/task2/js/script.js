@@ -35,6 +35,4 @@ function isValid(name) {
     if(name.length < 1 || name === 'null') {
         result= false;
     } return result;
-
-
 }

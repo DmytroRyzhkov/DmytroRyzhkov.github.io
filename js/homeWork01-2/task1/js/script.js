@@ -24,6 +24,16 @@ function pow(number, rate) {
     }
     return result;
 }
-var number = prompt("Введите целое число", "");
-var rate = prompt("Введите степень", "");
+function isValid(number) {
+    var result = true;
+    if (isNaN(number) || number === null) {
+        result= false;
+    } return result;
+}
+var number;
+do {number = prompt("Введите целое число", "");}
+while (!isValid(number));
+var rate;
+do {rate = prompt("Введите степень", "");}
+while (!isValid(rate));
 console.log(pow(number, rate));
