@@ -10,7 +10,8 @@ var userName = prompt('Enter user name!', '');
 nameCheck(userName, names);
 function nameCheck(name, dataBase) {
     var isCorrect = false;
-    for (var k = 0; k < dataBase.length; k++) {
+    var length = dataBase.length;
+    for (var k = 0; k < length; k++) {
         if (name === dataBase[k]) {
             isCorrect = true;
             var message = 'Hello, ' + name + ' !';
