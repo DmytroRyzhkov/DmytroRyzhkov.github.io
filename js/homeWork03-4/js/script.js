@@ -51,6 +51,12 @@ var test = {
                 wrapper.appendChild(checkboxContainer);
             }
         }
+        var button = document.createElement('button');
+        button.setAttribute('class', 'btn');
+        button.setAttribute('type', 'button');
+        var buttonText = document.createTextNode('Проверить мои результаты.');
+        button.appendChild(buttonText);
+        wrapper.appendChild(button);
 
 
     }
