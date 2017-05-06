@@ -20,31 +20,31 @@ var test = {
         ]
     },
     createTest: function () {
-        var x = document.createElement('div');
-        x.setAttribute('class', 'container-fluid');
-        document.body.appendChild(x);
-        var z = document.createElement('div');
-        z.setAttribute('class', 'page-header');
-        x.appendChild(z);
-        var h = document.createElement('h3');
-        h.setAttribute('class', 'text-center');
-        var t = document.createTextNode(this.data.title);
-        h.appendChild(t);
-        z.appendChild(h);
+        var wrapper = document.createElement('div');
+        wrapper.setAttribute('class', 'container-fluid');
+        document.body.appendChild(wrapper);
+        var header = document.createElement('div');
+        header.setAttribute('class', 'page-header');
+        wrapper.appendChild(header);
+        var h3 = document.createElement('h3');
+        h3.setAttribute('class', 'text-center');
+        var textHeader = document.createTextNode(this.data.title);
+        h3.appendChild(textHeader);
+        header.appendChild(h3);
         var len = this.data.questions.length;
         for (var i = 0; i < len; i++) {
-            var qt = document.createElement('p');
-            var tit = document.createTextNode(this.data.questions[i].title);
-            qt.appendChild(tit);
-            x.appendChild(qt);
+            var questionHeader = document.createElement('p');
+            var questionHeaderText = document.createTextNode(this.data.questions[i].title);
+            questionHeader.appendChild(questionHeaderText);
+            wrapper.appendChild(questionHeader);
             var ans = this.data.questions[i].answers.length;
-            // for (var m = 0; m < ans; ans++) {
-            //     var a = document.createElement('div');
-            //     a.setAttribute('class', 'checkbox');
-            //     var label = document.createElement('label');
-            //     a.appendChild(label);
-            //     x.appendChild(a);
-            // }
+            for (var m = 0; m < ans; m++) {
+                var checkboxContainer = document.createElement('div');
+                checkboxContainer.setAttribute('class', 'checkbox');
+                var label = document.createElement('label');
+                checkboxContainer.appendChild(label);
+                wrapper.appendChild(checkboxContainer);
+            }
         }
 
 
