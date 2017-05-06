@@ -21,7 +21,7 @@ var test = {
     },
     createTest: function () {
         var x = document.createElement('div');
-        x.setAttribute('class', 'container');
+        x.setAttribute('class', 'container-fluid');
        document.body.appendChild(x);
        var z = document.createElement('div');
        z.setAttribute('class', 'page-header' );
@@ -31,6 +31,14 @@ var test = {
        var t = document.createTextNode(this.data.title);
        h.appendChild(t);
        z.appendChild(h);
+       var len = this.data.questions.length;
+       for (var i = 0; i < len; i++ ) {
+           var qt = document.createElement('p');
+           var tit = document.createTextNode(this.data.questions[i].title);
+           qt.appendChild(tit);
+           x.appendChild(qt);
+       }
+
 
     }
 };
