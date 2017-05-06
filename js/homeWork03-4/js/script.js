@@ -45,6 +45,8 @@ var test = {
                 var input = document.createElement('input');
                 input.setAttribute('type', 'checkbox');
                 label.appendChild(input);
+                var answerText = document.createTextNode(this.data.questions[i].answers[m]);
+                label.appendChild(answerText);
                 checkboxContainer.appendChild(label);
                 wrapper.appendChild(checkboxContainer);
             }
