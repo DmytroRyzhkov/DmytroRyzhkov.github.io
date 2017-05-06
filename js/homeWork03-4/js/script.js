@@ -4,7 +4,7 @@
 'use strict';
 var test = {
     data: {
-        title: 'Тест по какой-то теме',
+        title: 'Тест по программированию.',
         questions: [{
             title: 'Вопрос №1',
             answers: ['Вариант овтета 1', 'Вариант овтета 2', 'Вариант овтета 3']
@@ -15,21 +15,24 @@ var test = {
             },
             {
                 title: 'Вопрос №3',
-                answers: ['Вариант овтета 1', 'Вариант овтета 2']
+                answers: ['Вариант овтета 1', 'Вариант овтета 2', 'Вариант овтета 3']
             }
         ]
     },
-    createHeader: function () {
-        var x = document.createElement("header");
-        x.setAttribute("id", "myHeader");
-        document.body.appendChild(x);
+    createTest: function () {
+        var x = document.createElement('div');
+        x.setAttribute('class', 'container');
+       document.body.appendChild(x);
+       var z = document.createElement('div');
+       z.setAttribute('class', 'page-header' );
+       x.appendChild(z);
+       var h = document.createElement('h3');
+       h.setAttribute('class', 'text-center');
+       var t = document.createTextNode(this.data.title);
+       h.appendChild(t);
+       z.appendChild(h);
 
-        var y = document.createElement("h3");
-        var t = document.createTextNode("TEST");
-        y.appendChild(t);
-
-        document.getElementById("myHeader").appendChild(y);
     }
 };
 
-test.createHeader();
+test.createTest();
