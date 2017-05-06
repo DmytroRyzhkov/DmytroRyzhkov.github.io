@@ -42,6 +42,9 @@ var test = {
                 var checkboxContainer = document.createElement('div');
                 checkboxContainer.setAttribute('class', 'checkbox');
                 var label = document.createElement('label');
+                var input = document.createElement('input');
+                input.setAttribute('type', 'checkbox');
+                label.appendChild(input);
                 checkboxContainer.appendChild(label);
                 wrapper.appendChild(checkboxContainer);
             }
