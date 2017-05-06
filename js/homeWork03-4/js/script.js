@@ -37,6 +37,14 @@ var test = {
            var tit = document.createTextNode(this.data.questions[i].title);
            qt.appendChild(tit);
            x.appendChild(qt);
+           var ans = this.data.questions[i].answers.length;
+           for(var m = 0; m <ans; ans++) {
+             var a = document.createElement('div');
+             a.setAttribute('class', 'checkbox');
+             var label = document.createElement('label');
+             a.appendChild(label);
+             x.appendChild(a);
+           }
        }
 
 
