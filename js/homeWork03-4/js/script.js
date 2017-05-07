@@ -31,14 +31,12 @@ var test = {
         var textHeader = document.createTextNode(this.data.title);
         h3.appendChild(textHeader);
         header.appendChild(h3);
-        var len = this.data.questions.length;
-        for (var i = 0; i < len; i++) {
+        for (var i = 0, len = this.data.questions.length; i < len; i++) {
             var questionHeader = document.createElement('p');
             var questionHeaderText = document.createTextNode(this.data.questions[i].title);
             questionHeader.appendChild(questionHeaderText);
             wrapper.appendChild(questionHeader);
-            var ans = this.data.questions[i].answers.length;
-            for (var m = 0; m < ans; m++) {
+            for (var m = 0, ans = this.data.questions[i].answers.length; m < ans; m++) {
                 var checkboxContainer = document.createElement('div');
                 checkboxContainer.setAttribute('class', 'checkbox');
                 var label = document.createElement('label');
@@ -56,7 +54,7 @@ var test = {
         var button = document.createElement('button');
         button.setAttribute('class', 'btn ');
         button.setAttribute('type', 'button');
-        var buttonText = document.createTextNode('Проверить мои результаты.');
+        var buttonText = document.createTextNode('Проверить мои результаты');
         button.appendChild(buttonText);
         buttonWrapper.appendChild(button);
         wrapper.appendChild(buttonWrapper);
