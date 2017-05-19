@@ -41,7 +41,7 @@ function Stopwatch(elem) {
 
     this.start = function () {
         if (!this.isOn) {
-            interval = setInterval(this.update.bind(this), 10);
+            interval = setInterval(this.update.bind(this), 5);
             offset = Date.now();
             this.isOn = true;
         }
@@ -70,8 +70,9 @@ function Stopwatch(elem) {
 
     function deleteSplitWindow() {
         var list = document.querySelectorAll('#splitWindow');
-        if (list.length > 0) {
-            for (var i = 0, len = list.length; i < len; i++) {
+        var len = list.length;
+        if (len > 0) {
+            for (var i = 0; i < len; i++) {
                 list[i].innerHTML = '';
             }
         }
