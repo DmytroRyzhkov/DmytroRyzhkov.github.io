@@ -24,7 +24,7 @@ resetBtn.addEventListener('click', function () {
     }
 });
 splitBtn.addEventListener('click', function () {
-    if(watch.isOn) {
+    if (watch.isOn) {
         watch.split();
     }
 });
@@ -79,15 +79,15 @@ function Stopwatch(elem) {
     };
     this.stop = function () {
         if (this.isOn) {
-            clearInterval(interval);
+            clearInterval (interval);
             interval = null;
             this.isOn = false;
         }
 
     };
     this.split = function () {
-        if(watch.isOn) {
-            var splitedTime = timeFormatter(time);
+        if (this.isOn) {
+            var splitedTime = timeFormatter (time);
             var splitedTimeWindow = document.createElement('h3');
             splitedTimeWindow.setAttribute('id', 'splitWindow');
             splitedTimeWindow.textContent = splitedTime;
@@ -95,7 +95,7 @@ function Stopwatch(elem) {
         }
 
     };
-    function deleteSplitWindow() {
+    function deleteSplitWindow () {
         var list = document.querySelectorAll('#splitWindow');
         if (list.length > 0) {
             for (var i = 0, len = list.length; i < len; i++) {
@@ -103,10 +103,10 @@ function Stopwatch(elem) {
             }
         }
     }
+
     this.reset = function () {
         time = 0;
         update();
         deleteSplitWindow();
-
     };
 }
