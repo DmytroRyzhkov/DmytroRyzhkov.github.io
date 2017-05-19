@@ -28,18 +28,19 @@ splitBtn.addEventListener('click', function () {
         watch.split();
     }
 });
+
 function Stopwatch(elem) {
     var time = 0;
     var interval;
     var offset;
+    this.isOn = false;
 
-    function update() {
-        if (watch.isOn) {
+    this.update = function () {
+        if (this.isOn) {
             time += delta();
         }
         elem.textContent = timeFormatter(time);
-
-    }
+    };
 
     function delta() {
         var timeNow = Date.now();
@@ -68,10 +69,10 @@ function Stopwatch(elem) {
 
     }
 
-    this.isOn = false;
+
     this.start = function () {
         if (!this.isOn) {
-            interval = setInterval(update, 10);
+            interval = setInterval(this.update.bind(this), 10);
             offset = Date.now();
             this.isOn = true;
         }
@@ -79,7 +80,7 @@ function Stopwatch(elem) {
     };
     this.stop = function () {
         if (this.isOn) {
-            clearInterval (interval);
+            clearInterval(interval);
             interval = null;
             this.isOn = false;
         }
@@ -87,7 +88,7 @@ function Stopwatch(elem) {
     };
     this.split = function () {
         if (this.isOn) {
-            var splitedTime = timeFormatter (time);
+            var splitedTime = timeFormatter(time);
             var splitedTimeWindow = document.createElement('h3');
             splitedTimeWindow.setAttribute('id', 'splitWindow');
             splitedTimeWindow.textContent = splitedTime;
@@ -95,7 +96,7 @@ function Stopwatch(elem) {
         }
 
     };
-    function deleteSplitWindow () {
+    function deleteSplitWindow() {
         var list = document.querySelectorAll('#splitWindow');
         if (list.length > 0) {
             for (var i = 0, len = list.length; i < len; i++) {
@@ -106,7 +107,7 @@ function Stopwatch(elem) {
 
     this.reset = function () {
         time = 0;
-        update();
+        this.update();
         deleteSplitWindow();
     };
 }
