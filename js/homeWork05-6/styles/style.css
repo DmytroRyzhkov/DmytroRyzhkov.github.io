@@ -11,6 +11,11 @@ body {
     font-size: 100px;
     font-weight:300;
 }
+#splitWindow {
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    font-weight:300;
+}
 button {
     width: 100px;
     height: 35px;

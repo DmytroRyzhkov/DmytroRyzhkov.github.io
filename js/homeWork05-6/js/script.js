@@ -1,13 +1,112 @@
 /**
- * Created by ryzhkov on 07.05.17.
+ * Created by ryzhkov on 19.05.17.
  */
 'use strict';
-var startTime = Date.now();
-var stopTime = Date.now();
-var result = stopTime - startTime;
-var box = document.createElement('p');
-box.textContent = result.toString();
-document.body.appendChild(box);
+var timer = document.getElementById('timer');
+var toggleBtn = document.getElementById('toggle');
+var resetBtn = document.getElementById('reset');
+var splitBtn = document.getElementById('split');
+var watch = new Stopwatch(timer);
+toggleBtn.addEventListener('click', function () {
+    if (watch.isOn) {
+        watch.stop();
+        toggleBtn.textContent = 'START';
+    }
+    else {
+        watch.start();
+        toggleBtn.textContent = 'STOP';
+
+    }
+});
+resetBtn.addEventListener('click', function () {
+    if (!watch.isOn) {
+        watch.reset();
+    }
+});
+splitBtn.addEventListener('click', function () {
+    if(watch.isOn) {
+        watch.split();
+    }
+});
+function Stopwatch(elem) {
+    var time = 0;
+    var interval;
+    var offset;
+
+    function update() {
+        if (watch.isOn) {
+            time += delta();
+        }
+        elem.textContent = timeFormatter(time);
+
+    }
+
+    function delta() {
+        var timeNow = Date.now();
+        var timePassed = timeNow - offset;
+        offset = timeNow;
+        return timePassed;
 
 
+    }
 
+    function timeFormatter(timeInMilliseconds) {
+        var time = new Date(timeInMilliseconds);
+        var minutes = time.getMinutes().toString();
+        var seconds = time.getSeconds().toString();
+        var milliseconds = time.getMilliseconds().toString();
+        if (minutes.length < 2) {
+            minutes = '0' + minutes;
+        }
+        if (seconds.length < 2) {
+            seconds = '0' + seconds;
+        }
+        while (milliseconds.length < 3) {
+            milliseconds = '0' + milliseconds;
+        }
+        return minutes + ':' + seconds + '.' + milliseconds;
+
+    }
+
+    this.isOn = false;
+    this.start = function () {
+        if (!this.isOn) {
+            interval = setInterval(update, 10);
+            offset = Date.now();
+            this.isOn = true;
+        }
+
+    };
+    this.stop = function () {
+        if (this.isOn) {
+            clearInterval(interval);
+            interval = null;
+            this.isOn = false;
+        }
+
+    };
+    this.split = function () {
+        if(watch.isOn) {
+            var splitedTime = timeFormatter(time);
+            var splitedTimeWindow = document.createElement('h3');
+            splitedTimeWindow.setAttribute('id', 'splitWindow');
+            splitedTimeWindow.textContent = splitedTime;
+            document.body.appendChild(splitedTimeWindow);
+        }
+
+    };
+    function deleteSplitWindow() {
+        var list = document.querySelectorAll('#splitWindow');
+        if (list.length > 0) {
+            for (var i = 0, len = list.length; i < len; i++) {
+                list[i].innerHTML = '';
+            }
+        }
+    }
+    this.reset = function () {
+        time = 0;
+        update();
+        deleteSplitWindow();
+
+    };
+}
