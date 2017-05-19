@@ -7,7 +7,7 @@ var toggleBtn = document.getElementById('toggle');
 var resetBtn = document.getElementById('reset');
 var splitBtn = document.getElementById('split');
 
-var watch = new Stopwatch(timer);
+var watch = new Stopwatch (timer);
 
 toggleBtn.addEventListener('click', function () {
     if (watch.isOn) {
