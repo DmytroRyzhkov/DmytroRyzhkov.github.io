@@ -20,8 +20,6 @@ function Stopwatch(elem) {
         var timePassed = timeNow - offset;
         offset = timeNow;
         return timePassed;
-
-
     }
 
     function timeFormatter(timeInMilliseconds) {
@@ -39,9 +37,7 @@ function Stopwatch(elem) {
             milliseconds = '0' + milliseconds;
         }
         return minutes + ':' + seconds + '.' + milliseconds;
-
     }
-
 
     this.start = function () {
         if (!this.isOn) {
@@ -51,6 +47,7 @@ function Stopwatch(elem) {
         }
 
     };
+
     this.stop = function () {
         if (this.isOn) {
             clearInterval(interval);
@@ -59,6 +56,7 @@ function Stopwatch(elem) {
         }
 
     };
+
     this.split = function () {
         if (this.isOn) {
             var splitedTime = timeFormatter(time);
@@ -69,6 +67,7 @@ function Stopwatch(elem) {
         }
 
     };
+
     function deleteSplitWindow() {
         var list = document.querySelectorAll('#splitWindow');
         if (list.length > 0) {
