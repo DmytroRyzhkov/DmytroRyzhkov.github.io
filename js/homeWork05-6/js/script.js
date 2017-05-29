@@ -17,7 +17,6 @@ toggleBtn.addEventListener('click', function () {
     else {
         watch.start();
         toggleBtn.textContent = 'STOP';
-
     }
 });
 resetBtn.addEventListener('click', function () {
