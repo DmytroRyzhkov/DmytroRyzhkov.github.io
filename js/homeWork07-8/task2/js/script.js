@@ -39,7 +39,7 @@ $(function () {
     }
 
     function hideTooltip(elem) {
-        $(elem).parent().find('span').animate({opacity: 'hide', right: '0'}, 'fast');
+        $(elem).parent().find('span').animate({opacity: 'hide', right: '0'}, 'slow');
     }
 
 });
