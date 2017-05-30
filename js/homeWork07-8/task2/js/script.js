@@ -10,9 +10,10 @@ $(function () {
     }, function () {
         makeWhite(this);
     });
-    $('button').on('click', function () {
+    $('button').on('click', function (e) {
       var elem =  $('input');
       makeRed(elem);
+      e.preventDefault();
     });
     function makeRed(elem) {
         $(elem).parent().css("background-color", "red");
