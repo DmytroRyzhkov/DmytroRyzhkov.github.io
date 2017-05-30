@@ -30,11 +30,11 @@ $(function () {
         e.preventDefault();
     });
     function showTooltip(elem) {
-        $(elem).parent().find('span').show(300);
+        $(elem).parent().find('span').animate({opacity: 'show', right: '0'}, 'slow');
     }
 
     function hideTooltip(elem) {
-        $(elem).parent().find('span').hide(300);
+        $(elem).parent().find('span').animate({opacity: 'hide', right: '0'}, 'fast');
     }
 
 });
