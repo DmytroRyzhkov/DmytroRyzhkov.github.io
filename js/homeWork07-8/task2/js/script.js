@@ -31,7 +31,7 @@ $(function () {
             $('span').each(function () {
                 hideTooltip(this);
             });
-        }, 3000);
+        }, 4000);
         e.preventDefault();
     });
     function showTooltip(elem) {
