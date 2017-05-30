@@ -24,14 +24,14 @@ $(function () {
     }, function () {
         hideTooltip(this);
     });
+    $('body').on('click', hideAllTooltips());
     $('button').on('click', function (e) {
         var elem = $('input');
         showTooltip(elem);
-        setInterval(function () {
-            $('span').each(function () {
-                hideTooltip(this);
-            });
-        }, 4000);
+       var interval = setInterval(function () {
+           hideAllTooltips();
+           clearInterval(interval);
+       }, 4000);
         e.preventDefault();
     });
     function showTooltip(elem) {
@@ -40,6 +40,11 @@ $(function () {
 
     function hideTooltip(elem) {
         $(elem).parent().find('span').animate({opacity: 'hide', right: '0'}, 'slow');
+    }
+    function hideAllTooltips() {
+        $('span').each(function () {
+            hideTooltip(this);
+        });
     }
 
 });
