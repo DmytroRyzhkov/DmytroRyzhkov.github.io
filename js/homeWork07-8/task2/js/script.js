@@ -3,22 +3,38 @@
  */
 'use strict';
 $(function () {
-    $('input').hover(function () {
-        var tooltip = this.title;
-        console.log(tooltip);
-        makeRed(this);
+    var input = $('input');
+    input.each(function () {
+        console.log(this);
+        var parent = $(this).parent();
+        $('<span>' + this.title + '</span>').appendTo(parent);
+        this.setAttribute('title', '');
+        $('span').css({
+            border: 'solid black 1px',
+            backgroundColor: 'aqua',
+            padding: '5px',
+            fontSize: '10px',
+            borderRadius: '2px',
+            display: 'none'
+        });
+    });
+    input.hover(function () {
+
+        showTooltip(this);
     }, function () {
-        makeWhite(this);
+        hideTooltip(this);
     });
     $('button').on('click', function (e) {
-      var elem =  $('input');
-      makeRed(elem);
-      e.preventDefault();
+        var elem = $('input');
+        showTooltip(elem);
+        e.preventDefault();
     });
-    function makeRed(elem) {
-        $(elem).parent().css("background-color", "red");
+    function showTooltip(elem) {
+        $(elem).parent().find('span').show(300);
     }
-    function makeWhite(elem) {
-        $(elem).parent().css("background-color", "white");
+
+    function hideTooltip(elem) {
+        $(elem).parent().find('span').hide(300);
     }
+
 });
