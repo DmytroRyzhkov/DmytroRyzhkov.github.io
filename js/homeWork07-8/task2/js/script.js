@@ -27,6 +27,11 @@ $(function () {
     $('button').on('click', function (e) {
         var elem = $('input');
         showTooltip(elem);
+        setInterval(function () {
+            $('span').each(function () {
+                hideTooltip(this);
+            });
+        }, 3000);
         e.preventDefault();
     });
     function showTooltip(elem) {
