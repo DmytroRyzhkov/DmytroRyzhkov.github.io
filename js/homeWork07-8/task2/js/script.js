@@ -24,7 +24,14 @@ $(function () {
     }, function () {
         hideTooltip(this);
     });
-    $('body').on('click', hideAllTooltips());
+    input.on('focus' , (function () {
+        var placeholder = this;
+        showTooltip(placeholder);
+        var int = setInterval(function () {
+            hideTooltip(placeholder);
+            clearInterval(int);
+        },3000);
+    }));
     $('button').on('click', function (e) {
         var elem = $('input');
         showTooltip(elem);
