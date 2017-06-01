@@ -5,7 +5,6 @@
 $(function () {
     var input = $('input');
     input.each(function () {
-        console.log(this);
         var parent = $(this).parent();
         $('<span>' + this.title + '</span>').appendTo(parent);
         this.setAttribute('title', '');
